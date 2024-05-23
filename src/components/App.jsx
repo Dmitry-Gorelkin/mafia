@@ -1,18 +1,17 @@
-import { useStore1 } from '../zustand/useStore';
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from './Layout';
+import { Home } from '../pages/Home';
+import { Classical } from '../pages/Classical';
+import { NotFound } from '../pages/NotFound';
 
 export const App = () => {
-  const { arrMaf, setArrMaf, setClear } = useStore1();
-
-  console.log(arrMaf);
-
   return (
-    <>
-      <h1>MAFIA</h1>
-
-      <p>{arrMaf}</p>
-
-      <button onClick={setArrMaf}>Cleak Me</button>
-      <button onClick={setClear}>ZERO</button>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="classical" element={<Classical />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 };
