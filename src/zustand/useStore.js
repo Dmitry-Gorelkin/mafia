@@ -1,15 +1,14 @@
 import create from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export const useStore1 = create(
+export const useStoreGame = create(
   persist(
     set => ({
-      arrMaf: 0,
-      setArrMaf: () => set(state => ({ arrMaf: state.arrMaf + 1 })),
-      setClear: () => set({ arrMaf: 0 }),
+      game: '',
+      setGame: e => set({ game: e }),
     }),
     {
-      name: 'my-games', // Укажите имя ключа в Local Storage
+      name: 'my-game', // Укажите имя ключа в Local Storage
     }
   )
 );
