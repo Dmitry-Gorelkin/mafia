@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-
-import { useStoreGame } from '../zustand/useStore';
+import { useStoreGame } from '../zustand/useStoreGame';
+import { CURRENT_HELMET_PAGE } from '../utils/constants';
 
 export const Home = () => {
   const { setGame } = useStoreGame();
 
   useEffect(() => {
-    setGame('Mafia');
+    setGame(CURRENT_HELMET_PAGE.home);
   }, []);
 
   return (

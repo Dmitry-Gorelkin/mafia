@@ -2,22 +2,26 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Container } from './UI/Container/Container.styled';
-import { useStoreGame } from '../zustand/useStore';
+import { useStoreGame } from '../zustand/useStoreGame';
+import { AppBar } from './AppBar/AppBar';
+import { Section } from './UI/Section/Section.styled';
 
 export const Layout = () => {
   const { game } = useStoreGame();
 
   return (
-    <Container>
+    <>
       <Helmet>
         <title>{game}</title>
       </Helmet>
-      <div>
-        <h1>MAFIA</h1>
-      </div>
-      <Suspense>
-        <Outlet />
-      </Suspense>
-    </Container>
+      <AppBar />
+      <Container>
+        <Section>
+          <Suspense>
+            <Outlet />
+          </Suspense>
+        </Section>
+      </Container>
+    </>
   );
 };

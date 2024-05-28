@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
-import { useStoreGame } from '../zustand/useStore';
 import { NavLink } from 'react-router-dom';
+import { useStorePage } from '../zustand/useStorePage';
+import { CURRENT_HELMET_PAGE } from '../utils/constants';
 
 export const Classical = () => {
-  const { game, setGame } = useStoreGame();
+  const { setHelmetPage } = useStorePage();
 
   useEffect(() => {
-    setGame('Classical');
+    setHelmetPage(CURRENT_HELMET_PAGE.classical);
   }, []);
 
   return (
     <>
-      <p>Play {game}</p>
+      <p>Play</p>
 
       <NavLink to="/">HOME</NavLink>
     </>
