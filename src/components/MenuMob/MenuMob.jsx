@@ -3,24 +3,21 @@ import { MenuList } from '../MenuList/MenuList';
 import { MenuMobBox, MenuMobIconClose, MenuMobIconOpren, MenuMobWindow } from './MenuMob.styled';
 
 export const MenuMob = () => {
-  const [displayMenu, setDisplayMenu] = useState(true);
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   const toggleDisplayMenu = () => {
     setDisplayMenu(state => !state);
-    console.log('first');
   };
-
-  // console.log(displayMenu);
 
   return (
     <>
-      {displayMenu && (
+      {!displayMenu && (
         <MenuMobBox>
           <MenuMobIconOpren onClick={toggleDisplayMenu} />
         </MenuMobBox>
       )}
 
-      {!displayMenu && (
+      {displayMenu && (
         <MenuMobWindow>
           <MenuMobIconClose onClick={toggleDisplayMenu} />
           <MenuList />
