@@ -2,17 +2,17 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Container } from './UI/Container/Container.styled';
-import { useStoreGame } from '../zustand/useStoreGame';
+import { useStorePage } from '../zustand/useStorePage';
 import { AppBar } from './AppBar/AppBar';
 import { Section } from './UI/Section/Section.styled';
 
 export const Layout = () => {
-  const { game } = useStoreGame();
+  const { page } = useStorePage();
 
   return (
     <>
       <Helmet>
-        <title>{game}</title>
+        <title>{page}</title>
       </Helmet>
       <AppBar />
       <Container>

@@ -4,8 +4,9 @@ import { persist } from 'zustand/middleware';
 export const useStoreGame = create(
   persist(
     set => ({
-      game: '',
-      setGame: e => set({ game: e }),
+      game: false,
+      setStartGame: () => set({ game: true }),
+      setStopGame: () => set({ game: false }),
     }),
     {
       name: 'my-game', // Укажите имя ключа в Local Storage

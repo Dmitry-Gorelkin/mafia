@@ -1,5 +1,11 @@
-import { MenuList, MenuItem, CiCircleAlertIcon } from './Menu.styled';
+import { MenuMob } from '../MenuMob/MenuMob';
+import { MenuTablDesk } from '../MenuTabDesc/MenuTablDesk';
 
 export const Menu = () => {
-  return <></>;
+  return (
+    <>
+      <MenuMob />
+      <MenuTablDesk />
+    </>
+  );
 };

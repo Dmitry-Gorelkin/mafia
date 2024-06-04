@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useStoreGame } from '../zustand/useStoreGame';
-import { CURRENT_HELMET_PAGE } from '../utils/constants';
+import { useStorePage } from '../zustand/useStorePage';
+import { CURRENT_PAGE } from '../utils/constants';
 
 export const NotFound = () => {
-  const { setGame } = useStoreGame();
+  const { setPage } = useStorePage;
 
   useEffect(() => {
-    setGame(CURRENT_HELMET_PAGE);
+    setPage(CURRENT_PAGE.home);
   }, []);
 
   return (

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { CiCircleAlert } from 'react-icons/ci';
+// import styled from 'styled-components';
+// import { CiCircleAlert } from 'react-icons/ci';
 
 // export const MenuList = styled.ul`
 //   display: flex;
