@@ -60,4 +60,6 @@ export const MenuMobIconClose = styled(CiCircleRemove)`
     width: 7.7vw;
     height: 7.7vw;
   }
+
+  transform: 'translate(-50%, -50%)';
 `;
