@@ -1,5 +1,5 @@
 import { Logo } from '../Logo/Logo';
-import { Menu } from '../Menu/Menu';
+import { Nav } from '../Nav/Nav';
 import { Container } from '../UI/Container/Container.styled';
 import { Section } from '../UI/Section/Section.styled';
 import { AppBarBox } from './AppBar.styled';
@@ -10,7 +10,7 @@ export const AppBar = () => {
       <Section>
         <AppBarBox>
           <Logo />
-          <Menu />
+          <Nav />
         </AppBarBox>
       </Section>
     </Container>

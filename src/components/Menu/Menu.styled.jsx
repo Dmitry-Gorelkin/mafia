@@ -1,26 +1,46 @@
-// import styled from 'styled-components';
-// import { CiCircleAlert } from 'react-icons/ci';
+import styled from 'styled-components';
+import { CiCircleRemove } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
 
-// export const MenuList = styled.ul`
-//   display: flex;
-// `;
+export const MenuBox = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-// export const MenuItem = styled.li`
-//   display: block;
+  position: absolute;
 
-//   color: ${p => p.theme.colors.gray};
+  top: 0;
+  left: 0;
 
-//   cursor: pointer;
+  background-color: gray;
 
-//   :hover,
-//   :focus {
-//     color: ${p => p.theme.colors.accent};
-//   }
-// `;
+  gap: 15px;
 
-// export const CiCircleAlertIcon = styled(CiCircleAlert)`
-//   width: 5vw;
-//   height: 5vw;
+  width: 100vw;
+  height: 100vh;
 
-//   color: fill;
-// `;
+  z-index: 10;
+`;
+
+export const MenuClosBtn = styled(Link)`
+  position: absolute;
+
+  top: 5vw;
+  right: 5vw;
+
+  color: ${p => p.theme.colors.accent};
+  text-decoration: none;
+`;
+
+export const MenuCloseIcon = styled(CiCircleRemove)`
+  width: 25px;
+  height: 25px;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 320px) {
+    width: 8vw;
+    height: 8vw;
+  }
+`;

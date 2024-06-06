@@ -1,9 +1,8 @@
-// import { useEffect } from 'react';
 import { CURRENT_PAGE } from '../../utils/constants';
 import { useStoreGame } from '../../zustand/useStoreGame';
 import { useStorePage } from '../../zustand/useStorePage';
 
-export const MenuList = () => {
+export const NavList = () => {
   const { page } = useStorePage();
   const { game } = useStoreGame();
 

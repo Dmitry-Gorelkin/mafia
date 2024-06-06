@@ -1,11 +1,11 @@
 // import styled from 'styled-components';
 // import { CiCircleAlert } from 'react-icons/ci';
 
-// export const MenuList = styled.ul`
+// export const NavList = styled.ul`
 //   display: flex;
 // `;
 
-// export const MenuItem = styled.li`
+// export const NavItem = styled.li`
 //   display: block;
 
 //   color: ${p => p.theme.colors.gray};

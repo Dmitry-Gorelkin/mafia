@@ -3,6 +3,7 @@ import { Layout } from './Layout';
 import { Home } from '../pages/Home';
 import { Classical } from '../pages/Classical';
 import { NotFound } from '../pages/NotFound';
+import { Menu } from '../components/Menu/Menu';
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="classical" element={<Classical />} />
+        <Route path="menu" element={<Menu />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

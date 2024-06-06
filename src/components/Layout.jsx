@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { Container } from './UI/Container/Container.styled';
 import { useStorePage } from '../zustand/useStorePage';
 import { AppBar } from './AppBar/AppBar';
+import { Container } from './UI/Container/Container.styled';
 import { Section } from './UI/Section/Section.styled';
 
 export const Layout = () => {

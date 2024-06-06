@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MenuTablDeskBox = styled.ul`
+export const NavTablDeskBox = styled.ul`
   display: none;
 
   @media screen and (min-width: 768px) {
