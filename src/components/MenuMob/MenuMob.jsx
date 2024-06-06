@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { MenuList } from '../MenuList/MenuList';
-import { MenuMobBox, MenuMobIconClose, MenuMobIconOpren, MenuMobWindow } from './MenuMob.styled';
+import { MenuMobWindow } from '../MenuMobWindow/MenuMobWindow';
+import { MenuMobBox, MenuMobIconOpren } from './MenuMob.styled';
 
 export const MenuMob = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -17,12 +17,7 @@ export const MenuMob = () => {
         </MenuMobBox>
       )}
 
-      {displayMenu && (
-        <MenuMobWindow>
-          <MenuMobIconClose onClick={toggleDisplayMenu} />
-          <MenuList />
-        </MenuMobWindow>
-      )}
+      {displayMenu && <MenuMobWindow close={toggleDisplayMenu} />}
     </>
   );
 };
