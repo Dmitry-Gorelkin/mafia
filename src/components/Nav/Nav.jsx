@@ -1,14 +1,11 @@
-import { NavMobPage } from '../NavMobPage/NavMobPage';
-// import { NavMob } from '../NavMob/NavMob';
-import { NavTablDesk } from '../NavTabDesc/NavTablDesk';
+import { NavMob } from '../NavMob/NavMob';
+import { NavTablDesk } from '../NavTablDesk/NavTablDesk';
 
 export const Nav = () => {
   return (
     <>
-      {/* <NavMob /> */}
+      <NavMob />
       <NavTablDesk />
-
-      <NavMobPage />
     </>
   );
 };

@@ -1,29 +1,24 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { CiCircleRemove } from 'react-icons/ci';
-import { Link } from 'react-router-dom';
 
-export const MenuBox = styled.ul`
+export const MenuMobBox = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 100vw;
+  height: 100vh;
 
   position: absolute;
 
   top: 0;
   left: 0;
 
-  background-color: gray;
-
-  gap: 15px;
-
-  width: 100vw;
-  height: 100vh;
-
-  z-index: 10;
+  background-color: ${p => p.theme.colors.gray};
 `;
 
-export const MenuClosBtn = styled(Link)`
+export const MenuClose = styled(Link)`
   position: absolute;
 
   top: 5vw;

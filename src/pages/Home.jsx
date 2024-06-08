@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { CURRENT_PAGE } from '../utils/constants';
 import { useStorePage } from '../zustand/useStorePage';
 
@@ -14,7 +14,10 @@ export const Home = () => {
     <>
       <h2>PAGE HOME</h2>
 
-      <NavLink to="/classical">Classical Mafia</NavLink>
+      <Link to="/classical">Classical Mafia</Link>
+
+      <h3>Game 2</h3>
+      <Link to="/game-of-thrones">Game Of Thrones</Link>
     </>
   );
 };

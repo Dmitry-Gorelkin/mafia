@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useStorePage } from '../zustand/useStorePage';
 import { CURRENT_PAGE } from '../utils/constants';
 import { useStoreGame } from '../zustand/useStoreGame';
@@ -16,7 +16,7 @@ export const Classical = () => {
     <>
       <p>Play</p>
 
-      <NavLink to="/">HOME</NavLink>
+      <Link to="/">HOME</Link>
 
       <button type="button" onClick={setStartGame}>
         начать игру

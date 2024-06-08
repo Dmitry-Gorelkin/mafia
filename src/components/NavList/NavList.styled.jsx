@@ -1,26 +1,20 @@
-// import styled from 'styled-components';
-// import { CiCircleAlert } from 'react-icons/ci';
+import styled from 'styled-components';
 
-// export const NavList = styled.ul`
-//   display: flex;
-// `;
+export const NavListBox = styled.ul`
+  display: flex;
+  flex-direction: column;
 
-// export const NavItem = styled.li`
-//   display: block;
+  justify-content: center;
+  align-items: center;
 
-//   color: ${p => p.theme.colors.gray};
+  gap: 20px;
 
-//   cursor: pointer;
+  cursor: pointer;
 
-//   :hover,
-//   :focus {
-//     color: ${p => p.theme.colors.accent};
-//   }
-// `;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 
-// export const CiCircleAlertIcon = styled(CiCircleAlert)`
-//   width: 5vw;
-//   height: 5vw;
-
-//   color: fill;
-// `;
+  @media screen and (min-width: 1200px) {
+  }
+`;

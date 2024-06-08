@@ -1,23 +1,17 @@
-import { useState } from 'react';
-import { Menu } from '../Menu/Menu';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { NavMobBox, NavMobIconOpren } from './NavMob.styled';
 
 export const NavMob = () => {
-  const [displayMenu, setDisplayMenu] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const toggleDisplayMenu = () => {
-    setDisplayMenu(state => !state);
+  const openMenu = () => {
+    navigate('/menu', { state: { from: location.pathname } });
   };
 
   return (
-    <>
-      {!displayMenu && (
-        <NavMobBox>
-          <NavMobIconOpren onClick={toggleDisplayMenu} />
-        </NavMobBox>
-      )}
-
-      {displayMenu && <Menu close={toggleDisplayMenu} />}
-    </>
+    <NavMobBox>
+      <NavMobIconOpren onClick={openMenu} />
+    </NavMobBox>
   );
 };
