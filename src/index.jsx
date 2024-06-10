@@ -8,7 +8,7 @@ import { App } from './components/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-  <BrowserRouter basename="/mafia/">
+  <BrowserRouter basename="mafia">
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <App />
