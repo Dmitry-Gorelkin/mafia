@@ -10,7 +10,7 @@ import { Rules } from '../pages/Rules';
 
 export const App = () => {
   return (
-    <Routes>
+    <Routes basename="/mafia">
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="menu" element={<Menu />} />
