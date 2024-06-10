@@ -22,7 +22,7 @@ export const Home = () => {
       <h3>Game 2</h3>
       <Link to="/game-of-thrones">Game Of Thrones</Link>
 
-      <p>тест5</p>
+      <p>тест6</p>
     </>
   );
 };
