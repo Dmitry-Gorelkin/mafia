@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/" />
     <script>
       var l = window.location;
-      var newUrl =
+      var redirectUrl =
         l.protocol +
         '//' +
         l.hostname +
         (l.port ? ':' + l.port : '') +
-        '/#' +
+        '/mafia/#' +
         l.pathname +
         l.search +
         l.hash;
-      l.replace(newUrl);
+      window.location.replace(redirectUrl);
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Redirecting...</h1>
+    <p>
+      If you are not redirected automatically, follow this <a id="redirect-link" href="#">link</a>.
+    </p>
+    <script>
+      document.getElementById('redirect-link').href = redirectUrl;
+    </script>
+  </body>
 </html>
