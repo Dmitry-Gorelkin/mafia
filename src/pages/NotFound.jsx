@@ -4,7 +4,7 @@ import { useStorePage } from '../zustand/useStorePage';
 import { CURRENT_PAGE } from '../utils/constants';
 
 export const NotFound = () => {
-  const { setPage } = useStorePage;
+  const { setPage } = useStorePage();
 
   useEffect(() => {
     setPage(CURRENT_PAGE.home);

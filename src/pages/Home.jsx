@@ -2,12 +2,15 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CURRENT_PAGE } from '../utils/constants';
 import { useStorePage } from '../zustand/useStorePage';
+import { useStoreGame } from '../zustand/useStoreGame';
 
 export const Home = () => {
   const { setPage } = useStorePage();
+  const { setNameGame } = useStoreGame();
 
   useEffect(() => {
     setPage(CURRENT_PAGE.home);
+    setNameGame('');
   }, []);
 
   return (

@@ -6,10 +6,11 @@ import { useStoreGame } from '../zustand/useStoreGame';
 
 export const Classical = () => {
   const { setPage } = useStorePage();
-  const { setStartGame, setStopGame } = useStoreGame();
+  const { setStartGame, setStopGame, setNameGame } = useStoreGame();
 
   useEffect(() => {
     setPage(CURRENT_PAGE.classical);
+    setNameGame(CURRENT_PAGE.classical);
   }, []);
 
   return (

@@ -7,6 +7,8 @@ export const useStoreGame = create(
       game: false,
       setStartGame: () => set({ game: true }),
       setStopGame: () => set({ game: false }),
+      nameGame: '',
+      setNameGame: name => set({ nameGame: name }),
     }),
     {
       name: 'my-game', // Укажите имя ключа в Local Storage
