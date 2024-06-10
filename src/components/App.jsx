@@ -13,11 +13,11 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="menu" element={<Menu />} />
-        <Route path="info" element={<Info />} />
-        <Route path="rules" element={<Rules />} />
-        <Route path="classical" element={<Classical />} />
-        <Route path="game-of-thrones" element={<GameOfThrones />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/rules" element={<Rules />} />
+        <Route path="/classical" element={<Classical />} />
+        <Route path="/game-of-thrones" element={<GameOfThrones />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
