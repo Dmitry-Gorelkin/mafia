@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import { CURRENT_PAGE } from '../../utils/constants';
 import { useStoreGame } from '../../zustand/useStoreGame';
 import { useStorePage } from '../../zustand/useStorePage';
-import { NavListBox } from './NavList.styled';
+import { InfoIcon, NavListBox } from './NavList.styled';
 
 export const NavList = () => {
   const { page } = useStorePage();
@@ -9,10 +10,17 @@ export const NavList = () => {
 
   return (
     <NavListBox>
-      {page !== CURRENT_PAGE.home && <li>Home</li>}
+      {page !== CURRENT_PAGE.home && (
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+      )}
       {page !== CURRENT_PAGE.home && <li>Новая игра</li>}
       {game && <li>Продолжить игру</li>}
-      <li>Правила игры</li>
+      {page !== CURRENT_PAGE.home && <li>Правила игры</li>}
+      <li>
+        <InfoIcon />
+      </li>
     </NavListBox>
   );
 };
