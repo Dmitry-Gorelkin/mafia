@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px; /* Базовый размер шрифта */
     line-height: 1.5;
 
+    color: ${p => p.theme.colors.text};
     background-color: ${p => p.theme.colors.background};
 
     @media screen and (min-width: 768px) {
@@ -34,17 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Roboto Slab', serif;
 
-    font-size: 2rem;
-    line-height: 1.3;
-
-
-    @media screen and (min-width: 768px) {
-        font-size: 2.5rem;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 3rem;
-    }
+    color: ${p => p.theme.colors.title};
     }
 
     p {
