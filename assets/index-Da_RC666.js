@@ -78,6 +78,7 @@ Error generating stack: `+i.message+`
     font-size: 16px; /* Базовый размер шрифта */
     line-height: 1.5;
 
+    color: ${e=>e.theme.colors.text};
     background-color: ${e=>e.theme.colors.background};
 
     @media screen and (min-width: 768px) {
@@ -98,17 +99,7 @@ Error generating stack: `+i.message+`
     margin: 0;
     font-family: 'Roboto Slab', serif;
 
-    font-size: 2rem;
-    line-height: 1.3;
-
-
-    @media screen and (min-width: 768px) {
-        font-size: 2.5rem;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 3rem;
-    }
+    color: ${e=>e.theme.colors.title};
     }
 
     p {
@@ -275,7 +266,16 @@ object-assign
   display: block;
   text-align: center;
 
-  color: ${e=>e.theme.colors.title};
+  font-size: 2rem;
+  line-height: 1.3;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 3rem;
+  }
 `,go=({children:e})=>E.jsx(E.Fragment,{children:E.jsx(R1,{children:e})}),N1=()=>{const{setPage:e}=xt(),{setNameGame:t}=mo();return P.useEffect(()=>{e(fe.home),t("")},[]),E.jsxs(E.Fragment,{children:[E.jsx(go,{children:"PAGE HOME"}),E.jsxs(vo,{children:[E.jsx(tt,{to:"/classical",children:"Classical Mafia"}),E.jsx("h3",{children:"Game 2"}),E.jsx(tt,{to:"/game-of-thrones",children:"Game Of Thrones"}),E.jsx("p",{children:"тест17"})]})]})},j1=()=>{const{setPage:e}=xt(),{setStartGame:t,setStopGame:n,setNameGame:r}=mo();return P.useEffect(()=>{e(fe.classical),r(fe.classical)},[]),E.jsxs(E.Fragment,{children:[E.jsx("p",{children:"Play"}),E.jsx(tt,{to:"/",children:"HOME"}),E.jsx("button",{type:"button",onClick:t,children:"начать игру"}),E.jsx("button",{type:"button",onClick:n,children:"Завершить игру"})]})},L1=()=>{const{setPage:e}=xt();return P.useEffect(()=>{e(fe.home)},[]),E.jsxs(E.Fragment,{children:[E.jsx(go,{children:"NO PAGE"}),E.jsx(sp,{to:"/",children:"HOME"})]})},I1=Re.div`
   display: flex;
   justify-content: center;
