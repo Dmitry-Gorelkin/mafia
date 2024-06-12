@@ -4,6 +4,7 @@ import { Section } from '../components/UI/Section/Section.styled';
 import { useStorePage } from '../zustand/useStorePage';
 import { CURRENT_PAGE } from '../utils/constants';
 import { RulesList } from '../components/RulesList/RulesList';
+import { Title } from '../components/UI/Title/Title';
 
 export const Rules = () => {
   const location = useLocation();
@@ -16,9 +17,7 @@ export const Rules = () => {
 
   return (
     <>
-      <Section>
-        <h2>Правиала Игры</h2>
-      </Section>
+      <Title>Правиала Игры</Title>
       <Section>
         <RulesList />
       </Section>

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { CURRENT_PAGE } from '../utils/constants';
 import { useStorePage } from '../zustand/useStorePage';
 import { useStoreGame } from '../zustand/useStoreGame';
+import { Title } from '../components/UI/Title/Title';
+import { Section } from '../components/UI/Section/Section.styled';
 
 export const Home = () => {
   const { setPage } = useStorePage();
@@ -15,14 +17,16 @@ export const Home = () => {
 
   return (
     <>
-      <h2>PAGE HOME</h2>
+      <Title>PAGE HOME</Title>
 
-      <Link to="/classical">Classical Mafia</Link>
+      <Section>
+        <Link to="/classical">Classical Mafia</Link>
 
-      <h3>Game 2</h3>
-      <Link to="/game-of-thrones">Game Of Thrones</Link>
+        <h3>Game 2</h3>
+        <Link to="/game-of-thrones">Game Of Thrones</Link>
 
-      <p>тест17</p>
+        <p>тест17</p>
+      </Section>
     </>
   );
 };

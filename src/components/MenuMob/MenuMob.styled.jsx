@@ -15,7 +15,7 @@ export const MenuMobBox = styled.div`
   top: 0;
   left: 0;
 
-  background-color: ${p => p.theme.colors.gray};
+  background-color: ${p => p.theme.colors.backgroundMenu};
 `;
 
 export const MenuClose = styled(Link)`
@@ -24,8 +24,13 @@ export const MenuClose = styled(Link)`
   top: 5vw;
   right: 5vw;
 
-  color: ${p => p.theme.colors.accent};
+  color: ${p => p.theme.colors.btn};
   text-decoration: none;
+
+  :hover,
+  :focus {
+    color: ${p => p.theme.colors.bthHover};
+  }
 `;
 
 export const MenuCloseIcon = styled(CiCircleRemove)`

@@ -4,6 +4,7 @@ import { useStorePage } from '../zustand/useStorePage';
 import { CURRENT_PAGE } from '../utils/constants';
 import { InfoList } from '../components/InfoList/InfoList';
 import { Section } from '../components/UI/Section/Section.styled';
+import { Title } from '../components/UI/Title/Title';
 
 export const Info = () => {
   const { setPage } = useStorePage();
@@ -14,9 +15,7 @@ export const Info = () => {
 
   return (
     <>
-      <Section>
-        <h2>Подготовка к Игре</h2>
-      </Section>
+      <Title>Подготовка к Игре</Title>
       <Section>
         <InfoList />
       </Section>

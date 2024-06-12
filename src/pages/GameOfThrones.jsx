@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useStorePage } from '../zustand/useStorePage';
 import { CURRENT_PAGE } from '../utils/constants';
 import { useStoreGame } from '../zustand/useStoreGame';
+import { Title } from '../components/UI/Title/Title';
 
 export const GameOfThrones = () => {
   const { setPage } = useStorePage();
@@ -15,7 +16,7 @@ export const GameOfThrones = () => {
 
   return (
     <>
-      <h2>Game Of Thrones</h2>
+      <Title>Game Of Thrones</Title>
 
       <Link to="/">HOME</Link>
 

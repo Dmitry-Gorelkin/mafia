@@ -4,13 +4,25 @@ import 'modern-normalize';
 export const GlobalStyle = createGlobalStyle`
     body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: 'Roboto Slab', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     z-index: 1;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px; /* Базовый размер шрифта */
+    line-height: 1.5;
+
+    background-color: ${p => p.theme.colors.background};
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
+    }
     }
 
     h1,
@@ -18,10 +30,28 @@ export const GlobalStyle = createGlobalStyle`
     h3,
     h4,
     h5,
-    h6,
+    h6 {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+
+    font-size: 2rem;
+    line-height: 1.3;
+
+
+    @media screen and (min-width: 768px) {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 3rem;
+    }
+    }
+
     p {
     margin: 0;
+    font-family: 'Roboto Slab', serif;
     }
+    
     ul,
     ol {
     margin: 0;
